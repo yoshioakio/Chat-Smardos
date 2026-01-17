@@ -81,17 +81,25 @@ def generate_smardos_response(user_input, model_name):
 
     llm = OllamaLLM(
         model=model_name,
-        temperature=0.7
+        temperature=0.3 # Diturunkan agar jawaban lebih konsisten dan tidak "ngaco"
     )
 
+    # Memperketat instruksi sistem (Guardrailing)
     system_instructions = (
-        "Kamu adalah SMARDOS (Smart Asisten Dosen). "
-        "Gunakan Bahasa Indonesia yang sopan dan akademis."
+        "Kamu adalah SMARDOS (Smart Asisten Dosen), asisten akademik khusus perguruan tinggi.\n"
+        "TUGAS UTAMA:\n"
+        "1. Hanya jawab pertanyaan yang berkaitan dengan materi perkuliahan, teori akademik, atau metode penelitian, dan referensi jurnal atau artikel.\n"
+        "2. Jika pertanyaan TIDAK berkaitan dengan materi perkuliahan atau pendidikan (misal: pertanyaan random, hiburan, atau hal aneh), "
+        "tolak dengan sopan dan katakan bahwa kamu hanya fokus pada bantuan mata kuliah.\n"
+        "3. Setiap jawaban WAJIB menyertakan referensi jurnal ilmiah yang valid di bagian akhir jawaban.\n"
+        "4. Format referensi harus mencantumkan Link URL (misal ke Google Scholar, DOAJ, atau portal jurnal lainnya).\n"
+        "5. Gunakan Bahasa Indonesia yang formal dan edukatif."
     )
 
-    full_prompt = f"System: {system_instructions}\nUser: {user_input}"
+    # Menggunakan template prompt yang lebih jelas memisahkan instruksi dan input user
+    full_prompt = f"### Instruction:\n{system_instructions}\n\n### User Question:\n{user_input}\n\n### Response:"
+    
     return llm.invoke(full_prompt)
-
 # ======================================================
 # 4. SIDEBAR
 # ======================================================
