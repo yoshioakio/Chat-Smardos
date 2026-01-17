@@ -36,6 +36,3 @@ Untuk menjaga kualitas bimbingan, SMARDOS memiliki batasan operasional:
 
 Jelajahi ekosistem SMARDOS secara langsung melalui tautan berikut:
 👉 [**smardos.streamlit.app**](https://smardos.streamlit.app/)
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_svg.svg)](https://smardos.streamlit.app/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
