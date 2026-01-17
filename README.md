@@ -1,2 +1,6 @@
 Jelajahi ekosistem SMARDOS melalui tautan berikut:
-👉 [http://127.0.0.1:5000](http://127.0.0.1:5000)
+👉 [https://smardos.streamlit.app/](https://smardos.streamlit.app/)
+
+![home.png](home.png)
+
+![chat.png](chat.png)
