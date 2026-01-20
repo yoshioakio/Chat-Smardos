@@ -36,3 +36,5 @@ Untuk menjaga kualitas bimbingan, SMARDOS memiliki batasan operasional:
 
 Jelajahi ekosistem SMARDOS secara langsung melalui tautan berikut:
 👉 [**smardos.streamlit.app**](https://smardos.streamlit.app/)
+
+🌐 [**https://smardos.djncloud.my.id/app**](https://smardos.djncloud.my.id/app)
