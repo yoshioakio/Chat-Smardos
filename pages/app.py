@@ -1,5 +1,8 @@
 import subprocess
 import streamlit as st
+import PyPDF2
+from streamlit_mic_recorder import mic_recorder
+from langchain_ollama import OllamaLLM
 
 # ======================================================
 # 1. KONFIGURASI HALAMAN
@@ -109,12 +112,6 @@ with st.sidebar:
         unsafe_allow_html=True
     )
     st.caption("v2.5 - Your Smart Academic Partner")
-
-    st.markdown("---")
-
-    st.subheader("📌 Navigasi")
-    if st.button("🏠 Kembali ke Beranda"):
-        st.info("Gunakan halaman home.py sebagai landing page.")
 
     st.markdown("---")
 
